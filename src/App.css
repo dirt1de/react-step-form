@@ -2,7 +2,20 @@
   text-align: center;
   width: 100vw;
   height:100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+input{
+  font-size: 1.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+form{
+  margin-top: 10%;
+  font-size: 1.5rem;
+  width: 30%;
+  height: 100%;
+  padding: 2rem;
+  border: black solid 3px;
+  border-radius: 10px;
 }

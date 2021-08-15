@@ -1,15 +1,35 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee,faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 
-export default function UserForm({nextPage}) {
+export default function UserForm({nextPage, handleChange, state}) {
+
     return (
         <div style={{display: "flex",
             justifyContent: "center",
             alignItems: "center",
             flexDirection:"column"}}>
-            <h1>User Information</h1>
-            Who are you?
-
-            <button onClick={nextPage}>Next Page</button>
+        <h1>User Information</h1>    
+        
+        <form>
+            <div style={{display: "flex",
+            width:"100%",
+            justifyContent:"center",
+            alignItems:"flex-start",
+            flexDirection:"column"}}>
+            <label>Last Name: </label>
+            <input name="lastName" type="text" onChange={handleChange} value={state.lastName} required/>
+          
+            <label>First Name: </label>
+            <input name="firstName" type="text" onChange={handleChange} value={state.firstName} required />
+           
+            <label>Email Address: </label>
+            <input name="email" type="email" onChange={handleChange} value={state.email} required/>
+            </div>
+        </form>
+        <span>
+        <FontAwesomeIcon icon={faLongArrowAltRight} color="green" size="3x" onClick={nextPage} style={{cursor:"pointer"}}/>
+        </span>
         </div>
     )
 }
