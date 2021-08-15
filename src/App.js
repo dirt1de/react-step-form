@@ -14,7 +14,7 @@ function App() {
     lastName: "",
     email: "",
     jobTitle: "",
-    topSkills: ""
+    topSkill: ""
   })
 
   const nextPage = () => {
@@ -49,7 +49,7 @@ function App() {
 
       case 2:
         return <div className="App">
-          <JobInfo handleChange={handleChange} nextPage={nextPage} prevPage={prevPage}></JobInfo>
+          <JobInfo handleChange={handleChange} nextPage={nextPage} prevPage={prevPage} state={state}></JobInfo>
         </div>
 
       case 3:

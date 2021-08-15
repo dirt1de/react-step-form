@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee,faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
+import {faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 
 export default function UserForm({nextPage, handleChange, state}) {
 
@@ -27,8 +27,13 @@ export default function UserForm({nextPage, handleChange, state}) {
             <input name="email" type="email" onChange={handleChange} value={state.email} required/>
             </div>
         </form>
-        <span>
-        <FontAwesomeIcon icon={faLongArrowAltRight} color="green" size="3x" onClick={nextPage} style={{cursor:"pointer"}}/>
+        <span style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            }}>
+        Next 
+        <FontAwesomeIcon icon={faLongArrowAltRight} color="#6495ED" size="3x" onClick={nextPage} style={{cursor:"pointer",marginLeft:"10px"}}/>
         </span>
         </div>
     )
